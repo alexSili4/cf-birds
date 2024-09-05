@@ -1,6 +1,11 @@
-.header {
+header.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   padding: 11px;
   border-bottom: 1px solid rgba(93, 90, 136, 0.17);
+  background-color: var(--white-color);
 }
 
 .nav {
@@ -16,7 +21,7 @@
 }
 
 @media screen and (min-width: 1310px) {
-  .header {
+  header.header {
     padding: 17px;
   }
 
