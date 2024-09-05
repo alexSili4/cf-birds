@@ -1,18 +1,21 @@
 import { defineConfig } from 'vite';
-import glob from 'glob';
 import injectHTML from 'vite-plugin-html-inject';
 import FullReload from 'vite-plugin-full-reload';
+import { resolve } from 'path';
 
 export default defineConfig({
   root: 'src',
   build: {
     rollupOptions: {
-      input: glob.sync('./src/*.html'),
+      input: {
+        main: resolve(__dirname, './src/index.html'),
+        thanks: resolve(__dirname, './src/thanks/index.html'),
+      },
       output: {
         // Настройка для вывода файлов в разные папки
         assetFileNames: (assetInfo) => {
           if (assetInfo.name.endsWith('.css')) {
-            return 'css/[name]-[hash][extname]';
+            return 'css/styles[extname]';
           }
           if (assetInfo.name.endsWith('.js')) {
             return 'js/[name]-[hash][extname]';
@@ -31,7 +34,7 @@ export default defineConfig({
         },
         // Настройка для вывода файлов JavaScript
         chunkFileNames: 'js/[name]-[hash].js',
-        entryFileNames: 'js/[name]-[hash].js',
+        entryFileNames: 'js/script.js',
       },
     },
     outDir: '../dist',

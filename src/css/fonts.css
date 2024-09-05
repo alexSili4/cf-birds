@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'Manrope';
+  src: local('Manrope'), url('/fonts/manrope/Manrope-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: local('Manrope'), url('/fonts/manrope/Manrope-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: local('Manrope'), url('/fonts/manrope/Manrope-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Actay Wide';
+  src: local('Actay Wide'), url('/fonts/actayWide/ActayWide-Bold.otf') format('opentype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: local('Inter'), url('/fonts/inter/Inter_18pt-SemiBold.ttf') format('truetype');
+  font-weight: 700;
+}
