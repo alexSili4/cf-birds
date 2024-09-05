@@ -18,23 +18,23 @@ export default defineConfig({
             return 'css/styles[extname]';
           }
           if (assetInfo.name.endsWith('.js')) {
-            return 'js/[name]-[hash][extname]';
+            return 'js/[name][extname]';
           }
           if (assetInfo.name.endsWith('.svg')) {
             return 'icons/[name]-[hash][extname]';
           }
-          if (assetInfo.name.endsWith('.ttf')) {
+          if (assetInfo.name.endsWith('.ttf') || assetInfo.name.endsWith('.otf')) {
             return 'fonts/[name]-[hash][extname]';
           }
-          if (assetInfo.name.endsWith('.png')) {
+          if (assetInfo.name.endsWith('.png') || assetInfo.name.endsWith('.jpg')) {
             return 'images/[name]-[hash][extname]';
           }
           // Настройка для других файлов, если необходимо
           return 'assets/[name]-[hash][extname]';
         },
         // Настройка для вывода файлов JavaScript
-        chunkFileNames: 'js/[name]-[hash].js',
-        entryFileNames: 'js/script.js',
+        chunkFileNames: 'js/[name].js',
+        entryFileNames: 'js/[name].js',
       },
     },
     outDir: '../dist',
